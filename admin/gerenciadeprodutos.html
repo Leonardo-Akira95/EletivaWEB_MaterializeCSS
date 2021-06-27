@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Painel ADM - Produtos</title>
+
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+	<link rel="icon" href="../imagens/favicon" type="image/gif" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../js/bootstrap.js"></script>
+	<script type="text/javascript" src="../js/events.js"></script>
+</head>
+<body>
+
+
+	<div class="container">
+
+				<h1 class="my-4">Painel Administrativo</h1>
+
+				<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+				  <div class="collapse navbar-collapse justify-content-center">
+				    <ul class="navbar-nav">
+				      <li class="nav-item active mr-4">
+				        <a class="nav-link" href="#">Gerenciar Produtos<span class="sr-only">(current)</span></a>
+				      </li>
+				      <li class="nav-item mr-4">
+				        <a class="nav-link" href="#">Gerenciar Clientes</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Gerenciar Vendas</a>
+				      </li>
+				    </ul>
+				  </div>
+				</nav>
+
+				<h3 class="my-4">Funções do sistema: </h3>
+
+				
+					<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalCadProduto"><span class="mr-2">+</span>Cadastrar produtos</button>
+				
+
+				<h3 class="my-4">Setor de gerência de produtos</h3>
+
+					
+
+					<table class="table table-hover table-striped table-dark" border="1px">
+						<thead class="thead-dark">
+							<tr>
+								<th scope="col">ID</th>
+								<th scope="col">Código</th>
+								<th scope="col">Nome</th>
+								<th scope="col">Descrição</th>
+								<th scope="col">Preço</th>
+								<th scope="col">Editar</th>
+								<th scope="col">Excluir</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>001</td>
+								<td>Vestido Masculino xD</td>
+								<td>Se não comprar é gay kkk Se não comprar é gay kkk Se não comprar é gay kkk Se não comprar é gay kkk Se não comprar é gay kkk Se não comprar é gay kkk Se não comprar é gay kkk Se não comprar é gay kkk Se não comprar é gay kkk</td>
+								<td>R$ 30,00</td>
+								<td><a href=""><img src="../imagens/icons/edit.png" height="30px" width="30px"></a></td>
+								<td><a href=""><img src="../imagens/icons/delete.png" height="30px" width="30px"></a></td>
+							</tr>
+						</tbody>
+					</table>
+				
+		</div>
+
+		<div class="modal fade" id="modalCadProduto" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <h4 class="modal-title">Cadastro de produtos</h4>
+	        </div>
+	        <div class="modal-body">
+	          <form action="" method="post" name="formCadastro" onsubmit="return validarFormCadastro()">
+	          	  <div class="form-group">
+				    <label for="cadLogin">ID: </label>
+				    <input type="text" class="form-control" id="cadTxtId" placeholder="Insira o ID do produto" name="cadTxtId"> 
+				  </div>
+				  <div class="form-group">
+				    <label for="cadLogin">Código: </label>
+				    <input type="text" class="form-control" id="cadTxtCodigo" placeholder="Insira o código do produto" name="cadTxtCodigo"> 
+				  </div>
+				  <div class="form-group">
+				    <label for="cadEmail">Nome: </label>
+				    <input type="text" class="form-control" id="cadTxtNome" placeholder="Insira o nome do produto" name="cadTxtNome">
+				  </div>
+				  <div class="form-group">
+				    <label for="cadSenha">Descrição: </label>
+				    <input type="textarea" class="form-control" id="cadTxtDesc" placeholder="Insira uma descrição" name="cadTxtDesc">
+				  </div>
+				  <div class="form-group">
+				    <label for="cadSenha">Preço: </label>
+				    <input type="text" class="form-control" id="cadTxtPreco" placeholder="Insira o preço" name="cadTxtPreco">
+				  </div>
+				  <input type="submit" class="btn btn-primary float-right" value="Cadastrar">
+				</form>
+				<small style="display:none" id="errTextCadastro"></small>
+	        </div>
+	        <div class="modal-footer justify-content-center">
+	        	<a href=""><small>Problemas para cadastrar? Contate suporte agora.</small></a>
+	        </div>
+	      </div>
+
+	    </div>
+	  </div>
+</body>
+</html>

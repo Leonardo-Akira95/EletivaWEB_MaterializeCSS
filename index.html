@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bem vindo!</title>
+
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link rel="icon" href="imagens/favicon" type="image/gif" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/validarForm.js"></script>
+</head>
+<body>
+	
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$('.multiple-items').slick({
+				infinite: true,
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				centerMode: true,
+				dots: true
+			});
+
+			$('.banner-nav').slick({
+				infinite: true,
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				centerMode: true,
+				arrows: false
+			});
+			
+		});
+		
+	</script>
+	
+	<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container py-2">
+		  <a class="navbar-brand" href="#">M</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="public/roupas.html">Roupas</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="public/acessorios.html">Acessórios</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="public/catalogo.html">Catálogo</a>
+		      </li>
+		    </ul>
+		    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalLogin"><span class="mr-2"><img src="imagens/icons/user.png"></span>Login</button>
+		  </div>
+		</div>
+	</nav>
+
+	<div class="modal fade" id="modalLogin" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <h4 class="modal-title">Login</h4>
+	        </div>
+	        <div class="modal-body">
+	          <form action="" method="post" name="formLogin" onsubmit="validarFormLogin()">
+				  <div class="form-group">
+				    <label for="logLogin">Login: </label>
+				    <input type="text" class="form-control" id="logLogin" aria-describedby="emailHelp" placeholder="Insira seu login" name="logTxtLogin">
+				  </div>
+				  <div class="form-group">
+				    <label for="logSenha">Senha: </label>
+				    <input type="password" class="form-control" id="logSenha" placeholder="Insira sua senha" name="logTxtPwd">
+				  </div>
+				  <div class="form-check">
+				    <input type="checkbox" class="form-check-input" id="logChkRemember" name="logChkRemember">
+				    <label class="form-check-label" for="logChkRemember">Lembrar-me</label>
+				  </div>
+				  <button type="submit" class="btn btn-primary float-right">Logar</button>
+				</form>
+	        </div>
+	        <div class="modal-footer justify-content-center">
+	        	<a href="" data-toggle="modal" data-target="#modalCadastro" data-dismiss="modal"><small>Não possui cadastro? Clique para cadastrar.</small></a>
+	        </div>
+	      </div>
+
+	    </div>
+	  </div>
+
+	  <div class="modal fade" id="modalCadastro" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <h4 class="modal-title">Cadastro</h4>
+	        </div>
+	        <div class="modal-body">
+	          <form action="" method="post" name="formCadastro" onsubmit="return validarFormCadastro()">
+	          	  <div class="form-group">
+				    <label for="cadLogin">Nome: </label>
+				    <input type="text" class="form-control" id="cadNome" placeholder="Insira seu login" name="cadTxtNome"> 
+				  </div>
+				  <div class="form-group">
+				    <label for="cadLogin">Login: </label>
+				    <input type="text" class="form-control" id="cadLogin" placeholder="Insira seu login" name="cadTxtLogin"> 
+				  </div>
+				  <div class="form-group">
+				    <label for="cadEmail">E-mail: </label>
+				    <input type="email" class="form-control" id="cadEmail" placeholder="Insira sua senha" name="cadTxtEmail">
+				  </div>
+				  <div class="form-group">
+				    <label for="cadSenha">Senha: </label>
+				    <input type="password" class="form-control" id="cadSenha" placeholder="Insira sua senha" name="cadTxtPwd">
+				  </div>
+				  <div class="form-group">
+				    <label for="cadSenha">Digite sua senha novamente: </label>
+				    <input type="password" class="form-control" id="cadSenhaAgain" placeholder="Insira sua senha novamente" name="cadTxtPwdAgain">
+				  </div>
+				  <input type="submit" class="btn btn-primary float-right" value="Cadastrar">
+				</form>
+				<small style="display:none" id="errTextCadastro"></small>
+	        </div>
+	        <div class="modal-footer justify-content-center">
+	        	<a href=""><small>Problemas no cadastro? Fale com nosso suporte.</small></a>
+	        </div>
+	      </div>
+
+	    </div>
+	  </div>
+
+	<div class="jumbotron">
+		<div class="banner-text container py-sm-4">
+			<h1>Encontre seu estilo</h1>
+			<p>Seja original e esteja a par das novidades do mundo da moda com a Mode!</p>
+			<a href=""><small>Saiba mais</small></a>
+		</div>
+	</div>
+
+	<div class="search-bar bg-dark py-sm-4">
+		<div class="container">
+			<form class="form-inline">
+				<input class="form-control col-sm-9" type="search" placeholder="Digite um item para pesquisar" aria-label="Pesquisar">
+				<button class="btn btn-danger col-sm-3" type="submit">Pesquisar</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="banner-nav row text-center">
+			<div class="banner-nav-item col-sm-2 py-4 px-2"><a href="">Vestidos</a></div>
+			<div class="banner-nav-item col-sm-2 py-4 px-2"><a href="">Bermudas	</a></div>
+			<div class="banner-nav-item col-sm-2 py-4 px-2"><a href="">Tênis</a></div>
+			<div class="banner-nav-item col-sm-2 py-4 px-2"><a href="">Acessórios</a></div>
+			<div class="banner-nav-item col-sm-2 py-4 px-2"><a href="">Botas</a></div>
+			<div class="banner-nav-item col-sm-2 py-4 px-2"><a href="">Bolsas</a></div>
+		</div>
+	</div>
+
+	<section id="blackground" class="my-4">
+		
+		<div class="container">
+
+			<h1>Promoções da semana</h1>
+			<hr style="border: 1px solid #e0e0e0">
+			<div class="row multiple-items">
+
+				<div class="card mb-3 mx-auto col-sm-12 col-md-4 px-0" style="max-width: 540px;  max-height:300px; height:300px;background:url(imagens/produtos/1.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center">
+				  <div class="row align-items-end no-gutters">
+				    <div class="col">
+				      <div class="card-body">
+				        <h4 class="card-title">Kit 5 Anéis</h4>
+				        <table class="info-produto mb-2">
+				        	<tr>
+				        		<td>Preço: </td>
+				        		<td>R$ 30,00</td>
+				        	</tr>
+				        </table>
+				        <button class="btn btn-danger mb-2">Mais informações</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="card mb-3 mx-auto col-md-4 px-0" style="max-width: 540px; max-height:300px; height:300px; background:url(imagens/produtos/2.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center">
+				  <div class="row no-gutters">
+				    <div class="col">
+				      <div class="card-body">
+				        <h4 class="card-title">Mulet Azul</h4>
+				        <table class="info-produto mb-2">
+				        	<tr>
+				        		<td>Preço: </td>
+				        		<td>R$ 30,00</td>
+				        	</tr>
+				        </table>
+				        <button class="btn btn-danger mb-2">Mais informações</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="card mb-3 mx-auto col-md-4 px-0" style="max-width: 540px; height:300px; max-height:300px; background:url(imagens/produtos/3.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center">
+				  <div class="row no-gutters">
+				    <div class="col">
+				      <div class="card-body">
+				        <h4 class="card-title">Saia-Suede</h4>
+				        <table class="info-produto mb-2">
+				        	<tr>
+				        		<td>Preço: </td>
+				        		<td>R$ 30,00</td>
+				        	</tr>
+				        </table>
+				        <button class="btn btn-danger mb-2">Mais informações</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="card mb-3 mx-auto col-sm-12 col-md-4 px-0" style="max-width: 540px;  max-height:300px; height:300px;background:url(imagens/produtos/4.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center">
+				  <div class="row align-items-end no-gutters">
+				    <div class="col">
+				      <div class="card-body">
+				        <h4 class="card-title">Kit 5 Anéis</h4>
+				        <table class="info-produto mb-2">
+				        	<tr>
+				        		<td>Preço: </td>
+				        		<td>R$ 30,00</td>
+				        	</tr>
+				        </table>
+				        <button class="btn btn-danger mb-2">Mais informações</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="card mb-3 mx-auto col-md-4 px-0" style="max-width: 540px; max-height:300px; height:300px; background:url(imagens/produtos/5.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center">
+				  <div class="row no-gutters">
+				    <div class="col">
+				      <div class="card-body">
+				        <h4 class="card-title">Mulet Azul</h4>
+				        <table class="info-produto mb-2">
+				        	<tr>
+				        		<td>Preço: </td>
+				        		<td>R$ 30,00</td>
+				        	</tr>
+				        </table>
+				        <button class="btn btn-danger mb-2">Mais informações</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="card mb-3 mx-auto col-md-4 px-0" style="max-width: 540px; height:300px; max-height:300px; background:url(imagens/produtos/6.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center">
+				  <div class="row no-gutters">
+				    <div class="col">
+				      <div class="card-body">
+				        <h4 class="card-title">Saia-Suede</h4>
+				        <table class="info-produto mb-2">
+				        	<tr>
+				        		<td>Preço: </td>
+				        		<td>R$ 30,00</td>
+				        	</tr>
+				        </table>
+				        <button class="btn btn-danger mb-2">Mais informações</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+			</div>
+
+			<h1>Itens adicionados recentemente..</h1>
+			<hr style="border: 1px solid #e0e0e0">
+			<div class="row multiple-items">
+
+				<div class="card mb-3 mx-auto col-sm-12 col-md-4 px-0" style="max-width: 540px;  max-height:300px; height:300px;background:url(imagens/produtos/1.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center">
+				  <div class="row align-items-end no-gutters">
+				    <div class="col">
+				      <div class="card-body">
+				        <h4 class="card-title">Kit 5 Anéis</h4>
+				        <table class="info-produto mb-2">
+				        	<tr>
+				        		<td>Preço: </td>
+				        		<td>R$ 30,00</td>
+				        	</tr>
+				        </table>
+				        <button class="btn btn-danger mb-2">Mais informações</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="card mb-3 mx-auto col-md-4 px-0" style="max-width: 540px; max-height:300px; height:300px; background:url(imagens/produtos/2.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center">
+				  <div class="row no-gutters">
+				    <div class="col">
+				      <div class="card-body">
+				        <h4 class="card-title">Mulet Azul</h4>
+				        <table class="info-produto mb-2">
+				        	<tr>
+				        		<td>Preço: </td>
+				        		<td>R$ 30,00</td>
+				        	</tr>
+				        </table>
+				        <button class="btn btn-danger mb-2">Mais informações</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="card mb-3 mx-auto col-md-4 px-0" style="max-width: 540px; height:300px; max-height:300px; background:url(imagens/produtos/3.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center">
+				  <div class="row no-gutters">
+				    <div class="col">
+				      <div class="card-body">
+				        <h4 class="card-title">Saia-Suede</h4>
+				        <table class="info-produto mb-2">
+				        	<tr>
+				        		<td>Preço: </td>
+				        		<td>R$ 30,00</td>
+				        	</tr>
+				        </table>
+				        <button class="btn btn-danger mb-2">Mais informações</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="card mb-3 mx-auto col-sm-12 col-md-4 px-0" style="max-width: 540px;  max-height:300px; height:300px;background:url(imagens/produtos/4.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center">
+				  <div class="row align-items-end no-gutters">
+				    <div class="col">
+				      <div class="card-body">
+				        <h4 class="card-title">Kit 5 Anéis</h4>
+				        <table class="info-produto mb-2">
+				        	<tr>
+				        		<td>Preço: </td>
+				        		<td>R$ 30,00</td>
+				        	</tr>
+				        </table>
+				        <button class="btn btn-danger mb-2">Mais informações</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="card mb-3 mx-auto col-md-4 px-0" style="max-width: 540px; max-height:300px; height:300px; background:url(imagens/produtos/5.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center">
+				  <div class="row no-gutters">
+				    <div class="col">
+				      <div class="card-body">
+				        <h4 class="card-title">Mulet Azul</h4>
+				        <table class="info-produto mb-2">
+				        	<tr>
+				        		<td>Preço: </td>
+				        		<td>R$ 30,00</td>
+				        	</tr>
+				        </table>
+				        <button class="btn btn-danger mb-2">Mais informações</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="card mb-3 mx-auto col-md-4 px-0" style="max-width: 540px; height:300px; max-height:300px; background:url(imagens/produtos/6.jpg); background-size:cover; background-repeat: no-repeat; background-position: center center">
+				  <div class="row no-gutters">
+				    <div class="col">
+				      <div class="card-body">
+				        <h4 class="card-title">Saia-Suede</h4>
+				        <table class="info-produto mb-2">
+				        	<tr>
+				        		<td>Preço: </td>
+				        		<td>R$ 30,00</td>
+				        	</tr>
+				        </table>
+				        <button class="btn btn-danger mb-2">Mais informações</button>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+<div class="container">
+
+	<img src="https://static.zattini.com.br/bnn/l_zattini/2019-06-04/32_full2_1306x420_generica_190604.jpg">
+
+</div>
+
+	<h1>Nossos patrocínios</h1>
+
+	<hr>
+
+		<div class="row">
+
+			<div class="col-md-2 mx-auto">
+				<figure class="figure px-2 py-2">
+				  <img src="imagens/logos/adidas.png" class="figure-img img-fluid" alt="Adidas">
+				  <figcaption class="figure-caption text-center">Adidas</figcaption>
+				</figure>
+			</div>
+
+
+			<div class="col-md-2 mx-auto">
+				<figure class="figure px-2 py-2">
+				  <img src="imagens/logos/nike.png" class="figure-img img-fluid" alt="Nike">
+				  <figcaption class="figure-caption text-center">Adidas</figcaption>
+				</figure>
+			</div>
+
+
+			<div class="col-md-2 mx-auto">
+				<figure class="figure px-2 py-2">
+				  <img src="imagens/logos/ck.png" class="figure-img img-fluid" alt="Louis Vuitton">
+				  <figcaption class="figure-caption text-center">Calvin Klein</figcaption>
+				</figure>
+			</div>
+
+
+			<div class="col-md-2 mx-auto">
+				<figure class="figure px-2 py-2">
+				  <img src="imagens/logos/gucci.jpg" class="figure-img img-fluid" alt="Gucci">
+				  <figcaption class="figure-caption text-center">Gucci</figcaption>
+				</figure>
+			</div>
+
+
+			<div class="col-md-2 mx-auto">
+				<figure class="figure px-2 py-2">
+				  <img src="imagens/logos/lacoste.png" class="figure-img img-fluid" alt="A generic square placeholder image with corners in a figure.">
+				  <figcaption class="figure-caption text-center">Lacoste</figcaption>
+				</figure>
+			</div>
+
+
+			<div class="col-md-2 mx-auto">
+				<figure class="figure px-2 py-2">
+				  <img src="imagens/logos/chanel.png" class="figure-img img-fluid" alt="A generic square placeholder image with corners in a figure.">
+				  <figcaption class="figure-caption text-center">Chanel</figcaption>
+				</figure>
+			</div>
+
+		</div>
+
+
+	<footer class="navbar-dark bg-dark">
+
+		<div class="container py-4">
+
+			<div class="row my-4">
+
+				<h1>Siga nossas redes sociais!</h1>
+
+			</div>
+
+			<div class="row">
+
+				<div class="footer-socials col-md-4">
+
+					<nav>
+						<ul>
+							<li class="social-item py-2 px-2"><a href=""><img src="imagens/social/facebook.png"><span class="ml-2">Facebook</span></a></li>
+							<li class="social-item py-2 px-2"><a href=""><img src="imagens/social/twitter.png"><span class="ml-2">Twitter</span></a></li>
+							<li class="social-item py-2 px-2"><a href=""><img src="imagens/social/instagram.png"><span class="ml-2">Instagram</span></a></li>
+						</ul>
+					</nav>
+
+				</div>
+
+				<div class="footer-text col-md-8 py-4 px-4">
+					
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae nisi semper, efficitur leo at, rutrum nisi. Praesent viverra eu dolor quis ornare. Mauris bibendum luctus felis, sed egestas est faucibus at. Duis luctus rutrum odio. Fusce nisi odio, tincidunt eu odio sit amet, eleifend viverra elit. In eget magna vitae dui condimentum ullamcorper et vel velit. Cras ex quam, pulvinar ac orci eget, pulvinar gravida lacus. Ut sit amet diam suscipit, ultrices elit in, suscipit velit. Quisque ac feugiat tortor, eu accumsan est.</p>
+
+				</div>
+
+			</div>
+
+			<div class="copy row justify-content-center pt-4 mt-4">
+				<p>&copy; All rights reserved ModeModas</p>
+			</div>
+
+		</div>
+
+	</div>
+
+	</footer>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+
+</body>
+
+</html>

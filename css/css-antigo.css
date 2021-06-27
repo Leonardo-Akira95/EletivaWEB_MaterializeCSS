@@ -1,0 +1,49 @@
+/*div>(header>ul>li*2>a)+footer>*/
+
+/*
+#002f40 - Azul pretóleo escuro
+#690924 - Vermelho escuro
+#adcbd2 - Azul gelo
+#cfd5d1 - Cinza claro
+*/
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Nunito';
+}
+body{
+	background: whitesmoke;
+}
+[class*="hvr"] {
+  background: none;
+}
+.hvr-shutter-out-vertical:before {
+	background: #002f40;
+	top: 7px;
+	bottom: 7px;
+	border-radius: 150px;
+}
+.navbar, .container-fluid{
+	padding: 0;
+}
+.navbar-nav{
+	flex-direction: row;
+}
+#menu li a{
+	color: #002f40;
+	font-family: 'Nunito';
+	font-weight: bold;
+}
+#menu li a:hover, #menu li a:focus{
+	color: white;
+	font-weight: normal;
+}
+#btn-login{
+	margin: 0 !important; 
+	padding: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bolder;
+	font-family: 'Montserrat';
+}

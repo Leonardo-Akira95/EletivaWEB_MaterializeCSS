@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway|Stylish');
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Raleway', sans-serif;
+	font-size:15px;
+}
+.navbar{
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+}
+.navbar .navbar-brand{
+	background-color: #dc3545;
+	text-align: center;
+	border-radius: 10px;
+	color: #ffffff;
+	width:4ch;
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+}
+.navbar .container{
+	background-color: #2d3238;
+	border-radius: 5px;
+}
+.navbar .navbar-nav .nav-item:hover{
+	background-color: #343a40;
+}
+.jumbotron{
+	background: url(../imagens/jumbotron.jpg) no-repeat fixed;
+	margin-bottom:0;
+	border-radius: 0;
+	background-size: cover;
+	height: 400px;
+  	overflow: hidden;
+}
+.banner-nav{
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+}
+.banner-nav .banner-nav-item{
+	background-color:#e0e0e0;
+}
+.banner-nav .banner-nav-item:hover{
+	background-color:#dc3545;
+	cursor: pointer;
+}
+.banner-nav .banner-nav-item a{
+	color:black;
+}
+.banner-nav .banner-nav-item a:hover{
+	text-decoration: none
+}
+.navbar .navbar-brand{
+	padding:5px 5px 5px 5px;
+}
+.custom-control:hover{
+	background-color:#343A3F;
+	color:white;
+}
+.card:hover{
+	-webkit-box-shadow: 0px 5px 10px 0px rgba(135,135,135,1);
+	-moz-box-shadow: 0px 5px 10px 0px rgba(135,135,135,1);
+	box-shadow: 0px 5px 10px 0px rgba(135,135,135,1);
+}
+.card-body{
+	background-color:rgba(0,0,0,0.2);
+	height:300px;
+	max-height:300px;
+	color:white;
+}
+section{
+	padding-top:2%;
+	padding-bottom:2%;
+}
+section#blackground{
+	background-color: #2d3238;
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+	color:white;
+}
+section#blackground h1{
+	color:white;	
+}
+span img{
+	width:1.5rem;
+}
+footer{
+	color:white;
+}
+footer .social-item{
+	list-style: none;
+}
+footer .social-item:hover{
+	background-color: #2d3238;
+	border-radius: 5px;
+}
+footer .social-item span{
+	color:white;
+}
+footer .social-item img{
+	height:35px;
+	width:35px;
+}
+footer .social-item a:hover{
+	text-decoration: none;
+}
+footer .footer-text{
+	background-color:#2d3238;
+	border-radius: 5px;
+}
+footer .copy{
+	background-color:#2d3238;
+	border-radius: 5px;
+}
+.rounded{
+	border-radius: 300px !important;
+}
+.errForm:focus{
+	outline: none !important;
+    border:1px solid red;
+    box-shadow: 0 0 10px #719ECE;
+}
+.slick-dots li.slick-active button:before{
+	color:black;
+}
+.table td{
+	text-align:center;
+}
+.modal-header{
+	background-color:#007bff;
+	color:white;
+}
+@media(max-width: 991.98px){
+	.navbar-expand-lg > .container, .navbar-expand-lg > .container-fluid
+	{
+		padding-right:15px;
+		padding-left:15px
+	}
+}
+

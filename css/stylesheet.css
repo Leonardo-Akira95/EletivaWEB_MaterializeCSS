@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+*{
+	font-family: 'PT Sans', sans-serif;
+	margin:0;
+	padding:0;
+}
+
+.container{
+	margin-right:15px;
+	margin-left:15px;
+}
+
+.navbar{
+	z-index:20;
+	position:absolute;
+	min-width:100%;
+	padding:10px 0 10px 0;
+}
+
+.menu{
+	margin:auto;
+	text-align: center;
+}
+
+.menu-item{
+	display:inline-block;
+}
+
+.menu .menu-item a{
+	margin-left:5ch;
+	margin-right:5ch;
+	font-size:20px;
+	color:white;
+	text-decoration:none;
+}
+
+.menu-item a:hover{
+	color:white;
+	border-bottom: 1px solid #d5d5d4;
+}
+
+#video{
+	position:absolute;
+  	z-index:10;
+  	right: 0;
+  	bottom: 0;
+  	min-width: 100%; 
+  	min-height: 100%;
+}
+
+#video-content{
+	position:absolute;
+	width:25%;
+	left:10%;
+	top:60%;
+	z-index:30;
+	color:white;
+	background-color: rgba(25,25,25, 0.5);
+	padding:30px;
+	padding-top:0;
+	border-radius:20px;
+	text-align: justify;
+}
+
+#video-content h1{
+	padding:10;
+	padding-bottom:5;
+	border-radius:20px;
+	border-top-left-radius:0px; 
+	border-top-right-radius:0px;
+	background-color:rgba(50,50,50,0.8);
+	margin-bottom:5px;
+}
+
+#overlay{
+	position:absolute;
+	background-color:rgba(0,0,0,0.5);
+	min-height:100%;
+	min-width:100%;
+	right:0;
+  	bottom:0;
+  	z-index:15;
+}
+
+#overlay2{
+	position:absolute;
+	background-color:rgba(0,0,0,0.5);
+	height:450px;
+	min-width:100%;
+	top:0;
+  	left:0;
+  	z-index:15;
+}
+
+#jumbotron{
+	background-image:url("https://cdn.vox-cdn.com/thumbor/dMo3_OOMJqKJf4-1lfbBm-stoV0=/0x0:2040x1360/1200x800/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/59242701/akrales_180327_2419_0432.0.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	min-width:100%;
+	height:450px;
+}
+
+#main #main-content{
+	background-color:#ffffff;
+	height:100%;
+	width:50%;
+}
+
+#catalogo{
+	padding-top:100px;
+	padding-bottom:100px;
+	max-width:100%;
+	background-color:#efefef;
+}
+
+.catalogo-content{
+	display:inline-block;
+	padding:20px 0 0 0;
+	max-width:30%;
+	margin: 15px 15px 15px 15px;
+}
+
+.catalogo-content img{
+	max-width:100%;
+	max-height:100%;
+}
+
+.catalogo-content img:hover{
+
+}
+
+.catalogo-text{
+	background-color:#e0e0e0;
+}
+
+#contato{
+	padding:100px 20px 100px 20px;
+	background-color:#efefef;
+}
+
+#contato table tr{
+	font-size:25px;
+}
+
+#contato table tr input{
+	font-size:25px;
+}
+
+.button{
+	padding:10px 10px 10px 10px;
+	border:none;
+	background:#ff7f50;
+	color:white;
+	border-radius:2px;
+	font-size:16px;
+}
+
+footer{
+	background-color:#00004d;
+	padding:10px 0 10px 0;
+	text-align:center;
+	margin:auto;
+}
+
+footer{
+
+}

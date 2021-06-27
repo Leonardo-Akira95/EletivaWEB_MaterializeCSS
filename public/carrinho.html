@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meu Carrinho</title>
+
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+	<link rel="icon" href="../imagens/favicon" type="image/gif" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../js/bootstrap.js"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$('.banner-nav').slick({
+				infinite: true,
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				centerMode: true,
+			});
+
+		});
+		
+
+	</script>
+
+	<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container py-2">
+		  <a class="navbar-brand" href="#">M</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item">
+		        <a class="nav-link" href="../index.html">Home</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Roupas</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Acessórios</a>
+		      </li>
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">Produtos <span class="sr-only">(current)</span></a>
+		      </li>
+		    </ul>
+		    <button type="button" class="btn btn-danger mr-2" data-toggle="modal" data-target="#modalLogin"><span class="mr-2"><img src="../imagens/icons/cart.png"></span>Carrinho <span class="badge badge-light">4</span></button>
+		    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalLogin"><span class="mr-2"><img src="../imagens/icons/user.png"></span>Login</button>
+		  </div>
+		</div>
+	</nav>
+
+
+<section id="carrinho">
+
+	<div class="container">
+
+		<div class="row">
+		
+				<div class="col-md-12">
+					<h1 class="my-4">Seu carrinho de compras</h1>
+					<table class="table table-hover table-striped table-dark" border="1px">
+						<thead class="thead-dark">
+							<tr>
+								<th scope="col">Produto</th>
+								<th scope="col">Quantidade</th>
+								<th scope="col">Valor Unitário</th>
+								<th scope="col">Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Mulet Azul</td>
+								<td>1</td>
+								<td>R$ 30,00</td>
+								<td>R$ 30,00</td>
+							</tr>
+							<tr>
+								<td>Saia-Suede</td>
+								<td>2</td>
+								<td>R$ 30,00</td>
+								<td>R$ 60,00</td>
+							</tr>
+							<tr>
+								<td>Kit 5 anéis</td>
+								<td>1</td>
+								<td>R$ 30,00</td>
+								<td>R$ 30,00</td>
+							</tr>
+							<tr>
+								<td colspan="3">Valor total: </td>
+								<td>R$ 120,00</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+		</div>
+			<div class="row justify-content-end">
+
+				<button class="btn btn-success">Finalizar Compra <span class="ml-2"><img src="../imagens/icons/arrow-right.png"></span></button>
+
+			</div>
+
+	</div>
+
+</section>
+
+<footer class="navbar-dark bg-dark">
+
+	<div class="container py-4">
+
+		<div class="row my-4">
+
+			<h1>Siga nossas redes sociais!</h1>
+
+		</div>
+
+		<div class="row">
+
+			<div class="footer-socials col-md-4">
+
+				<nav>
+					<ul>
+						<li class="social-item py-2 px-2"><a href=""><img src="../imagens/social/facebook.png"><span class="ml-2">Facebook</span></a></li>
+						<li class="social-item py-2 px-2"><a href=""><img src="../imagens/social/twitter.png"><span class="ml-2">Twitter</span></a></li>
+						<li class="social-item py-2 px-2"><a href=""><img src="../imagens/social/instagram.png"><span class="ml-2">Instagram</span></a></li>
+					</ul>
+				</nav>
+
+			</div>
+
+			<div class="footer-text col-md-8 py-4 px-4">
+					
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae nisi semper, efficitur leo at, rutrum nisi. Praesent viverra eu dolor quis ornare. Mauris bibendum luctus felis, sed egestas est faucibus at. Duis luctus rutrum odio. Fusce nisi odio, tincidunt eu odio sit amet, eleifend viverra elit. In eget magna vitae dui condimentum ullamcorper et vel velit. Cras ex quam, pulvinar ac orci eget, pulvinar gravida lacus. Ut sit amet diam suscipit, ultrices elit in, suscipit velit. Quisque ac feugiat tortor, eu accumsan est.</p>
+
+			</div>
+
+			</div>
+
+			<div class="copy row justify-content-center pt-4 mt-4">
+				<p>&copy; All rights reserved ModeModas</p>
+			</div>
+
+	</div>
+
+</footer>
+
+</body>
+
+</html>

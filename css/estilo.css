@@ -1,0 +1,143 @@
+/*div>(header>ul>li*2>a)+footer>*/
+
+/*
+#002f40 - Azul pretóleo escuro
+#690924 - Vermelho escuro
+#adcbd2 - Azul gelo
+#cfd5d1 - Cinza claro
+*/
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Nunito';
+}
+body{
+	background: #ffffff;
+}
+.pointer{
+	cursor: pointer;
+}
+[class*="hvr"] {
+  background: none;
+}
+.hvr-shutter-out-vertical:before {
+	background: #002f40;
+    border-radius: 150px;
+    top: 30px;
+    bottom: 30px;
+    margin: -15px;
+}
+#menu{
+	background: white;
+	color: black;
+	height: 10%;
+	box-shadow: none;
+	border-bottom: 2px solid lightgray;
+}
+#logo{
+	height: 100%;
+	background-image: url('../imagens/logo3.PNG');
+	background-size: 120%;
+	background-position:center;
+	background-repeat: no-repeat;
+}
+#itens span{
+	margin-left: 5%;
+}
+#itens span a{
+	color: #002f40;
+	font-family: 'Nunito';
+	font-weight: bold;
+}
+#itens span a:hover, #itens span a:focus{
+	color: white;
+	font-weight: normal;
+}
+#login{
+	margin-right: 20px;
+    margin-top: 10px;
+}
+.btn{
+	font-family: 'Nunito' !important;
+	text-transform: none !important;
+	border-radius: 3px;
+}
+.btn-1{
+	background: #adcbd2;
+}
+#modal-login{
+	width: 30%;
+}
+#modal-cadastro{
+	width: 30%;
+	max-height: 85%;
+}
+#form-login .row{
+	margin-bottom: 0%;
+}
+#corpo{
+	height: 100%;
+}
+#caixa-card{
+	margin: 2%;
+	margin-top: 5%;
+}
+.pagination li a{
+	font-size: 0.8em;
+}
+.card-content{
+	height: 25%;
+}
+.card-content p{
+	font-family: 'Nunito';
+}
+.card-content .preco{
+    font-weight: bold;
+    line-height: 40px;
+}
+.card-content .nome-produto{
+	height: 40%;
+}
+#filtro{
+	margin-top: 2%;
+}
+#filtro form{
+	padding: 10px;
+    padding-left: 20px;
+    /* border-bottom: 1px solid #cfd5d1;*/
+}
+#filtro form:last-child{
+	border-bottom: none;
+}
+#filtro form blockquote{
+	border-color: #002f40 ;
+	color: #002f40;
+}
+#filtro form [type="checkbox"].filled-in:checked+span:not(.lever):after{
+	background-color: #002f40 ;
+	border-color: #002f40 ;
+}
+.menu-gerencial ul a{
+	text-align:center;
+	font-size: 20px;
+}
+.tabela-gerencial td a img{
+	padding:10px;
+	height:50px;
+	width:50px;
+	background-color:#efefef;
+}
+.tabela-gerencial td a img:hover{
+	background-color: #e0e0e0;
+}
+.tabela-gerencial .tabela-header{
+	background-color:#efefef;
+}
+.section.section-header{
+
+}
+.container-fluid{
+	margin-right: 15px;
+	margin-left: 15px;
+}

@@ -1,0 +1,32 @@
+function validarFormCadastro(){
+	
+ 	var formCadastroNome = document.forms["formCadastro"]["cadTxtNome"];
+ 	var formCadastroLogin = document.forms["formCadastro"]["cadTxtLogin"];
+ 	var formCadastroEmail = document.forms["formCadastro"]["cadTxtEmail"];
+ 	var formCadastroSenha = document.forms["formCadastro"]["cadTxtPwd"];
+ 	var formCadastroSenhaDois = document.forms["formCadastro"]["cadTxtPwdAgain"];
+
+ 		if(formCadastroNome == ""){
+ 			var cadNome = document.getElementById("cadNome");
+ 			cadNome.placeholder = "É necessário digitar o login para cadastrar!";
+ 			cadNome.style.border = "1px solid red";
+ 		}else if(formCadastroLogin == ""){
+ 			var cadLogin = document.getElementById("cadLogin");
+ 			cadLogin.placeholder = "É necessário digitar o login para cadastrar!";
+ 			cadLogin.style.border = "1px solid red";
+ 		}else if(formCadastroEmail == ""){
+			var cadEmail = document.getElementById("cadEmail");
+ 			cadEmail.placeholder = "É necessário digitar o e-mail para cadastrar!";
+ 			cadEmail.style.border = "1px solid red";
+ 		}else if(formCadastroSenha == ""){
+ 			var cadSenha = document.getElementById("cadSenha");
+ 			cadSenha.placeholder = "É necessário digitar a senha para cadastrar!";
+ 			cadSenha.style.border = "1px solid red";
+ 		}else if(formCadastroSenhaDois == ""){
+ 			var cadSenhaDois = document.getElementById("cadSenhaDois");
+ 			cadSenhaDois.placeholder = "É necessário digitar sua senha novamente!";
+ 			cadSenhaDois.style.border = "1px solid red";
+ 		}else if(formCadastroSenha != formCadastroSenhaDois){
+ 			alert("Os campos de senha não coincidem, confira os campos..");
+ 		}
+}
